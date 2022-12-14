@@ -1,6 +1,6 @@
 B1 : Clone về
 B2 : NPM I 
-B3 : Tải mongoDB compass
+B3 : Tải mongoDB compass 6.0.3 : link https://www.mongodb.com/try/download/community
 B4 : Chạy mongoDB compass với cổng mongodb://localhost:27017/DATN
 B5 : Cách test DB chạy với thunderClient với cổng http://localhost:4000/api/products
 

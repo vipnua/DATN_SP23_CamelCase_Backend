@@ -9,12 +9,14 @@ import mongoose from "mongoose";
 import authRoute from './routes/auth'
 const app = express();
 app.use(cors());
-mongoose.connect('mongodb://localhost:27017/web16308');
-
+mongoose.connect('mongodb://0.0.0.0/DATN')
+    .then(() => console.log("Kết nối db thành công"))
+    .catch((error) => console.log(error));
+    
 app.use(express.json())
 app.use(Home);
-app.use(productsRouter);
-app.use("/",authRoute)
+app.use("/api",productsRouter);
+app.use("/api",authRoute)
 
 
 // const homeRoute = require('./routes/home');
@@ -22,7 +24,7 @@ app.use("/",authRoute)
 
 // const products = require('./routes/product');
 // app.use(products);
-
-app.listen(8000, () => {
-    console.log("server is running")
+const PORT = 4000;
+app.listen(PORT, () => {
+    console.log("Server is running port", PORT);
 })

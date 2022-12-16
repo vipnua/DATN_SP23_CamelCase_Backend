@@ -9,7 +9,7 @@ const jobdoneSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    job_salary: {
+    job_salary: {   
         type: Number,
         required: true,
     },

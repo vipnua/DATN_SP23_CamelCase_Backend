@@ -12,7 +12,6 @@ export const list = async (req, res) => {
 }
 export const create = async (req, res) => {
     try {
-        // Dữ liệu từ form client gửi lên
         const job = await new JOBDONE(req.body).save();
         res.json(job)
     } catch (error) {
@@ -29,6 +28,17 @@ export const remove = async (req, res) => {
     } catch (error) {
         res.status(400).json({
             message: "Khong the xoa"
+        })
+    }
+}
+export const read = async (req, res) => {
+    const filter = { _id: req.params.id }
+    try {
+        const job = await JOBDONE.findOne(filter);
+        res.json(job)
+    } catch (error) {
+        res.status(400).json({
+            message: "Khong lay duoc san pham"
         })
     }
 }

@@ -5,36 +5,36 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    // job_description: {
-    //     type: String,
-    //     required: true,
-    // },
-    // job_salary: {
-    //     type: Number,
-    //     required: true,
-    // },
-    // working_form: {
-    //     type: String,
-    //     required: true,
-    // },
-    // number_of_recruits: {
-    //     type: Number,
-    //     required: true,
-    // },
-    // experience: {
-    //     type: String,
-    //     required: true,
-    // },
-    // gender: {
-    //     type: Boolean
-    // },
-    // work_location: {
-    //     type: String,
-    //     required: true,
-    // },
-    // user_id: {
-    //     type: Number,
-    // }
+    job_description: {
+        type: String,
+        required: true,
+    },
+    job_salary: {
+        type: Number,
+        required: true,
+    },
+    working_form: {
+        type: String,
+        required: true,
+    },
+    number_of_recruits: {
+        type: Number,
+        required: true,
+    },
+    experience: {
+        type: String,
+        required: true,
+    },
+    gender: {
+        type: Boolean
+    },
+    work_location: {
+        type: String,
+        required: true,
+    },
+    user_id: {
+        type: Number,
+    }
 }, {
     timestamps: true,
 })

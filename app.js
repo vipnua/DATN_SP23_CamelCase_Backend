@@ -7,6 +7,7 @@ import productsRouter from "./routes/product";
 import mongoose from "mongoose";
 import jobdonesRouter from "./routes/jobdone";
 import authRoute from './routes/auth'
+import postRoute from './routes/post'
 const app = express();
 app.use(cors());
 mongoose.connect('mongodb://localhost:27017/DATN')

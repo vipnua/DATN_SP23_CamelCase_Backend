@@ -7,16 +7,18 @@ import productsRouter from "./routes/product";
 import mongoose from "mongoose";
 
 import authRoute from './routes/auth'
+import postRoute from './routes/post'
 const app = express();
 app.use(cors());
 mongoose.connect('mongodb://0.0.0.0/DATN')
     .then(() => console.log("Kết nối db thành công"))
     .catch((error) => console.log(error));
-    
+
 app.use(express.json())
 app.use(Home);
-app.use("/api",productsRouter);
-app.use("/api",authRoute)
+app.use("/api", productsRouter);
+app.use("/api", authRoute)
+app.use("/api", postRoute)
 
 
 // const homeRoute = require('./routes/home');

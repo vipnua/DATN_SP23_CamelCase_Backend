@@ -20,10 +20,6 @@ app.use("/api", productsRouter);
 app.use("/api", jobdonesRouter);
 app.use("/api", authRoute)
 
-
-// const homeRoute = require('./routes/home');
-// app.use(homeRoute);
-
 const PORT = 4000;
 app.listen(PORT, () => {
     console.log("Server is running port", PORT);

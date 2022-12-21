@@ -1,6 +1,6 @@
 import JOBDONE from "../models/jobdone";
 
-export const list = async (req, res) => {
+export const getJobDones = async (req, res) => {
     try {
         const jobs = await JOBDONE.find().exec();
         res.json(jobs);
@@ -10,7 +10,7 @@ export const list = async (req, res) => {
         })
     }
 }
-export const create = async (req, res) => {
+export const addJobDone = async (req, res) => {
     try {
         const job = await new JOBDONE(req.body).save();
         res.json(job)
@@ -20,7 +20,7 @@ export const create = async (req, res) => {
         })
     }
 }
-export const remove = async (req, res) => {
+export const removeJobDone = async (req, res) => {
     const condition = { _id: req.params.id }
     try {
         const job = await JOBDONE.findOneAndDelete(condition);
@@ -31,7 +31,7 @@ export const remove = async (req, res) => {
         })
     }
 }
-export const read = async (req, res) => {
+export const getJobDone = async (req, res) => {
     const filter = { _id: req.params.id }
     try {
         const job = await JOBDONE.findOne(filter);

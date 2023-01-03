@@ -6,23 +6,23 @@ const productSchema = new Schema({
     },
     feature:{
         type: String,
-        required: true
+        required: true,
     },
     descriptionS: {
         type: String,
-        required: true
+        required: true,
     },
     saleOffPrice: {
         type: Number,
-        required: true
+        required: true,
     },
     originalPrice: {
         type: Number,
-        required: true
+        required: true,
     },
     image: {
         type: String,
-        required: true
+        required: true,
     }
 }, { timestamps: true});
 productSchema.index({'$**':'text'})
